@@ -20,16 +20,17 @@ namespace StacksAndQueues
         public static void StackandQueue()
         {
             LinkedListStack linkedListStack = new LinkedListStack();
+            LinkedListQueue linkedListQueue = new LinkedListQueue();
             bool CONTINUE = true;
             while (CONTINUE)
             {
                 Console.WriteLine("\nPlease choose your option");
-                Console.WriteLine("1.Stack 0.Exit");
+                Console.WriteLine("1.Stack 2.Queue 0.Exit");
                 int choose = int.Parse(Console.ReadLine());
                 switch (choose)
                 {
                     case 1:
-                        Console.WriteLine("Creating A Stack\n");
+                        Console.WriteLine("Creating a Stack\n");
                         linkedListStack.Push(70);
                         linkedListStack.Push(30);
                         linkedListStack.Push(56);
@@ -43,6 +44,13 @@ namespace StacksAndQueues
                         Console.WriteLine("\nPopTillStackBecomesEmpty\n");
                         linkedListStack.StackIsEmpty();
                         linkedListStack.Display();
+                        break;
+                    case 2:
+                        Console.WriteLine("Creating a Queue\n");
+                        linkedListQueue.Enqueue(56);
+                        linkedListQueue.Enqueue(30);
+                        linkedListQueue.Enqueue(70);
+                        linkedListQueue.Display();
                         break;
                     case 0:
                         CONTINUE = false;
